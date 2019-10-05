@@ -41,7 +41,9 @@ const Content = styled.div`
   padding: 100px 0;
 `;
 
-const ContentHeader = styled.h2``;
+const ContentHeader = styled.h2`
+  font-weight: 500;
+`;
 
 const Container = styled.div`
   display: inline-grid;
@@ -65,7 +67,10 @@ const Block = styled.div`
   padding-right: 20px;
 
   &:nth-child(2) {
-    width: 400px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

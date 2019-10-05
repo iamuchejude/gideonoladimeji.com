@@ -34,7 +34,6 @@ const Wrapper = styled.div`
   margin: 10vh auto;
   width: 900px;
 
-
   a,
   a:link,
   a:visited,

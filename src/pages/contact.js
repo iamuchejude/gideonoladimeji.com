@@ -25,12 +25,14 @@ const Content = styled.div`
   a:hover,
   a:focus {
     text-decoration: underline;
+    font-weight: 500;
   }
 `;
 
 const Info = styled.p`
   font-size: 1.4em;
   line-height: 1.5em;
+  font-weight: 500;
 
   ${props => props.second && css`
     margin-top: 4em;

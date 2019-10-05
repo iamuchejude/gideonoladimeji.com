@@ -29,10 +29,12 @@ const Content = styled.div`
 const Text = styled.p`
   font-size: 1.5em;
   margin: 15px 0;
+  font-weight: 500;
 
   a {
     text-transform: capitalize;
     text-decoration: underline !important;
+    font-weight: 500;
   }
 `;
 
