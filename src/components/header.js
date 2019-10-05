@@ -1,42 +1,78 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled, { css } from 'styled-components';
+import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+import logo from '../images/logo.png';
+import logoWhite from '../images/logo_white.png';
+
+import Nav from '../components/nav';
+
+const Header = ({ pathname }) => {
+  const pathName = pathname === '/';
+
+  return (
+    <Container>
+      <LogoContainer>
+        <Link to="/">
+          <LogoImage src={logoWhite} active={!(pathName)} alt="GIDEON OLADIMEJI" />
+          <LogoImage src={logo} active={pathName} alt="GIDEON OLADIMEJI" />
         </Link>
-      </h1>
-    </div>
-  </header>
-)
+      </LogoContainer>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+      <NavContainer>
+        <Nav menu={[
+          {
+            name: 'About',
+            link: '/about',
+          },
+          {
+            name: 'Contact',
+            link: '/contact',
+          },
+          {
+            name: 'Blog',
+            link: '/blog',
+          },
+        ]} pathname={pathname} />
+      </NavContainer>
+    </Container >
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+const Container = styled.header`
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-export default Header
+  &::after {
+    content: '';
+    display: 'block';
+    clear: both;
+  }
+`;
+
+const LogoImage = styled.img`
+  width: 80px;
+  display: none;
+
+  ${props => props.active && css`
+    display: block;
+  `}
+`;
+
+const LogoContainer = styled.div`
+  margin-right: 15px;
+  height: 100%;
+
+  a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+`;
+
+const NavContainer = styled.div`
+`;
+
+export default Header;
