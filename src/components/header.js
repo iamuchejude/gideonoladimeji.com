@@ -1,10 +1,8 @@
 import React from "react"
 import styled, { css } from 'styled-components';
 import { Link } from "gatsby"
-
 import logo from '../images/logo.png';
 import logoWhite from '../images/logo_white.png';
-
 import Nav from '../components/nav';
 
 const Header = ({ pathname }) => {
@@ -45,10 +43,8 @@ const Container = styled.header`
   align-items: center;
   justify-content: flex-start;
 
-  &::after {
-    content: '';
-    display: 'block';
-    clear: both;
+  @media (max-width: 600px) {
+    justify-content: space-between;
   }
 `;
 
