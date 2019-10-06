@@ -34,6 +34,11 @@ const Wrapper = styled.div`
   margin: 10vh auto;
   width: 900px;
 
+  @media (max-width: 920px) {
+    width: 82vw;
+    margin: 5vh auto;
+  }
+
   a,
   a:link,
   a:visited,
@@ -45,6 +50,11 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   height: calc(100vh - (3 * 10vh));
+  padding: 5em 0;
+
+  @media (max-width: 500px) {
+    padding: 3em 0;
+  }
 `;
 
 export default Layout
