@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Writing = () => (
   <Layout pathname="/writing">
+    <SEO title="Gideon writes too." />
     <Info>
       I write about thoughts on design, process, creative thinking, life and other things on <a href="https://medium.com/@olagidi9" target="_blank" rel="noopener noreferrer">medium</a>.
     </Info>

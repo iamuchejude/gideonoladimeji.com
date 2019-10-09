@@ -2,10 +2,12 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import GideonImage from '../images/gideon_one.png';
+import SEO from '../components/seo';
+import GideonImage from '../images/gideon.png';
 
 const About = () => (
   <Layout pathname="/about">
+    <SEO title="About Gideon." />
     <ContentHeader>About Gideon</ContentHeader>
     <Container>
       <Block>

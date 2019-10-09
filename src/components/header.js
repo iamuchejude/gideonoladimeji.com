@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import styled, { css } from 'styled-components';
-import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import logo from '../images/logo.png';

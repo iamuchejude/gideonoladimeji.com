@@ -33,6 +33,7 @@ Layout.propTypes = {
 const Wrapper = styled.div`
   margin: 10vh auto;
   width: 900px;
+  min-height: 100vh;
 
   @media (max-width: 1000px) {
     width: 90vh;
@@ -57,8 +58,7 @@ const Main = styled.main`
   padding: 5em 0;
 
   @media (max-width: 500px) {
-    padding: 3em 0 5em;
-    margin-bottom: 2em;
+    padding: 3em 0 3em;
   }
 `;
 

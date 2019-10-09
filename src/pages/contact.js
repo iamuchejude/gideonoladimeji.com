@@ -1,14 +1,16 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Contact = () => (
   <Layout pathname="/contact">
+    <SEO title="Reach out to Gideon." />
     <Info>
       Want to talk about an Idea, or something you're working on, or you have a project for my company? Hit me up on <a href="https://twitter.com/scalarbane" target="_blank" rel="noopener noreferrer">twitter</a>, <a href="https://linkedin.com/in/scalarbane" target="_blank" rel="noopener noreferrer">linkedin</a> or <a href="mailto: olagidi9@gmail.com" target="_blank" rel="noopener noreferrer">email</a>,  I’ll be happy to hear from you.
     </Info>
     <Info second>
-      You can check out my <a href="https://iamuchejude.dev" target="_blank" rel="noopener noreferrer">resume</a> here.
+      You can check out my <a href="https://docs.google.com/document/d/1W-JO0i-B-JAUE7ata4OFxsPUiRsblvqPQIp2-9OvtVg" target="_blank" rel="noopener noreferrer">resume</a> here.
       </Info>
   </Layout>
 );

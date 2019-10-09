@@ -1,13 +1,15 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Index = () => (
   <Layout pathname="/">
+    <SEO title="Gideon's sitting room." />
     <Text>Product Designer, Pianist and a Mobile Photographer.</Text>
     <Text>
       Currently doing Product Design at <a href="https://automattic.com" target="_blank" rel="noopener noreferrer">Automattic</a>.
-      </Text>
+    </Text>
     <Text>This site shows insights on how I think and use design to solve problems.</Text>
     <a
       href="http://dribbble.com/scalarbane"

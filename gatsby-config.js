@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Gideon Oladimeji`,
-    description: `Personal Website for Gideon Oladimeji`,
-    author: `@iamcuhejude`,
+    description: `Gideon's E-Apartment`,
+    author: `@scalarbane`,
+    url: `https://www.gideonoladimeji.com`,
+    image: `/images/gideon.jpg`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -18,16 +20,44 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.gideonoladimeji.com',
+        sitemap: 'https://www.gideonoladimeji.com/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `personal-portfolio`,
-        short_name: `starter`,
+        name: `Gideon Oladimeji`,
+        short_name: `Gideon`,
+        description: `Gideon's E-Apartment.`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+        icons: [
+          {
+            src: `/icons/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/icons/icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
-  ],
+  ]
 }
