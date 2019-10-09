@@ -5,8 +5,8 @@ import Layout from '../components/layout';
 const Contact = () => (
   <Layout pathname="/contact">
     <Info>
-      Wanna talk about an Idea, or something you're working on, or you have a project for my company? Hit me up on <a href="https://twitter.com/scalarbane" target="_blank" rel="noopener noreferrer">twitter</a>, <a href="https://linkedin.com/in/scalarbane" target="_blank" rel="noopener noreferrer">linkedin</a> or <a href="mailto: olagidi9@gmail.com" target="_blank" rel="noopener noreferrer">email</a>,  I’ll be happy to hear from you.
-      </Info>
+      Want to talk about an Idea, or something you're working on, or you have a project for my company? Hit me up on <a href="https://twitter.com/scalarbane" target="_blank" rel="noopener noreferrer">twitter</a>, <a href="https://linkedin.com/in/scalarbane" target="_blank" rel="noopener noreferrer">linkedin</a> or <a href="mailto: olagidi9@gmail.com" target="_blank" rel="noopener noreferrer">email</a>,  I’ll be happy to hear from you.
+    </Info>
     <Info second>
       You can check out my <a href="https://iamuchejude.dev" target="_blank" rel="noopener noreferrer">resume</a> here.
       </Info>

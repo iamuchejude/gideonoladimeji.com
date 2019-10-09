@@ -1,37 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 import styled, { css } from 'styled-components';
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import logo from '../images/logo.png';
 import logoWhite from '../images/logo_white.png';
 import Nav from '../components/nav';
 
 const Header = ({ pathname }) => {
   const pathName = pathname === '/';
+  const [menu] = useState([
+    { name: 'About', link: '/about' },
+    { name: 'Writing', link: '/writing' },
+    { name: 'Contact', link: '/contact' },
+  ]);
 
   return (
     <Container>
       <LogoContainer>
-        <Link to="/">
+        <AniLink paintDrip color="#000" to="/">
           <LogoImage src={logoWhite} active={!(pathName)} alt="GIDEON OLADIMEJI" />
           <LogoImage src={logo} active={pathName} alt="GIDEON OLADIMEJI" />
-        </Link>
+        </AniLink>
       </LogoContainer>
 
       <NavContainer>
-        <Nav menu={[
-          {
-            name: 'About',
-            link: '/about',
-          },
-          {
-            name: 'Contact',
-            link: '/contact',
-          },
-          {
-            name: 'Blog',
-            link: '/blog',
-          },
-        ]} pathname={pathname} />
+        <Nav menu={menu} pathname={pathname} />
       </NavContainer>
     </Container >
   )

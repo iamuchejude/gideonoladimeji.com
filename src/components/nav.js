@@ -1,33 +1,45 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styled, { css } from 'styled-components';
 
-const Nav = ({ menu }) => (
-  <NavContainer>
-    <MenuIcon>
-      <MenuBar />
-      <MenuBar />
-      <MenuBar />
-    </MenuIcon>
+const Nav = ({ menu }) => {
+  const [menuActive, setMenuActive] = useState(false);
 
-    <Menu>
-      {menu.length > 0 && menu.map(item => (
-        <Item
-          key={Math.trunc(Math.random() * new Date())}
-        >
-          <Link
-            to={item.link}
-            activeStyle={{ borderBottom: '2px solid #000' }}
-          >{item.name}</Link>
-        </Item>
-      ))}
-    </Menu>
-  </NavContainer>
-);
+  const toggleMobileMenu = () => setMenuActive(!menuActive);
+
+  return (
+    <NavContainer>
+      <MenuIcon onClick={toggleMobileMenu}>
+        <MenuBar />
+        <MenuBar />
+        <MenuBar />
+      </MenuIcon>
+
+      <Menu menuActive={menuActive}>
+        <Close onClick={toggleMobileMenu} />
+
+        {menu.length > 0 && menu.map(item => (
+          <Item
+            key={Math.trunc(Math.random() * new Date())}
+          >
+            <AniLink
+              paintDrip
+              color="black"
+              to={item.link}
+              activeClassName="active"
+              activeStyle={{ borderBottom: '2px solid #000' }}
+            >
+              {item.name}
+            </AniLink>
+          </Item>
+        ))}
+      </Menu>
+    </NavContainer>
+  );
+}
 
 const NavContainer = styled.nav`
   height: 100%;
-  position: relative;
 `;
 
 const MenuIcon = styled.a`
@@ -51,6 +63,44 @@ const MenuBar = styled.div`
   margin: 4px 0;
 `;
 
+const Close = styled.a`
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0px;
+    content: ' ';
+    height: 30px;
+    width: 2px;
+    background-color: #000;
+    cursor: pointer;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+`;
+
 const Menu = styled.ul`
   padding: 0;
   margin: 0;
@@ -61,7 +111,22 @@ const Menu = styled.ul`
   height: 100%;
 
   @media (max-width: 600px) {
-    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    display: block;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    padding: 2em 0 0;
+    transform: translateX(100%);
+    transition: 700ms ease;
+
+    ${props => props.menuActive && css`
+      transform: translateX(0);
+      display: block;
+    `}
   }
 `;
 
@@ -71,6 +136,15 @@ const Item = styled.li`
   a {
     text-transform: lowercase;
     font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    margin: 2em 3em;
+
+    a {
+      font-size: 1.6em;
+      font-weight: 400;
+    }
   }
 `;
 
