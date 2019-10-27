@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 
 const Index = () => (
   <Layout pathname="/">
-    <SEO title="Gideon's sitting room." />
+    <SEO title="Gideon Oladimeji - Product Designer" />
     <Text>Product Designer, Pianist and a Mobile Photographer.</Text>
     <Text>
       Currently doing Product Design at <a href="https://automattic.com" target="_blank" rel="noopener noreferrer">Automattic</a>.

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import GideonImage from '../images/gideon.png';
@@ -21,11 +22,11 @@ const About = () => (
         </Text>
 
         <Text>
-          I have previously worked at various agencies and startups where I’ve used design to solve problems and also influence decisions, I’m also the CEO of a startup design agency <a href="https://3strokes.co" target="_blank" rel="noreferrer noopener">3strokes</a>; focused on helping businesses scale with design.
+          I have previously worked at various agencies and startups where I’ve used design to solve problems and also influence decisions, I’m also the CEO of a startup design agency <a href="http://3strokes.design" target="_blank" rel="noreferrer noopener">3strokes</a>; focused on helping businesses scale with design.
         </Text>
 
         <Text>
-          Do you have a project for my company? or just want to say hello? don’t hesitate to <Link to="/contact">contact me</Link>. Cheers!
+          Do you have a project for my company? or just want to say hello? don’t hesitate to <AniLink paintDrip color="black" to="/contact">contact me</AniLink>. Cheers!
         </Text>
       </Block>
 
@@ -33,7 +34,7 @@ const About = () => (
         <Image src={GideonImage} deskop alt="Gideon" />
       </Block>
     </Container>
-  </Layout>
+  </Layout >
 );
 
 const ContentHeader = styled.h2`

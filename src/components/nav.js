@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 
 const Nav = ({ menu }) => {
   const [menuActive, setMenuActive] = useState(false);
-
   const toggleMobileMenu = () => setMenuActive(!menuActive);
 
   return (

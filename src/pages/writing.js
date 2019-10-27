@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const Writing = () => (
   <Layout pathname="/writing">
-    <SEO title="Gideon writes too." />
+    <SEO title="Gideon's Articles." />
     <Info>
       I write about thoughts on design, process, creative thinking, life and other things on <a href="https://medium.com/@olagidi9" target="_blank" rel="noopener noreferrer">medium</a>.
     </Info>
@@ -13,7 +14,7 @@ const Writing = () => (
 );
 
 const Info = styled.p`
-  font-size: 1.8em;
+  font-size: 1.4em;
   line-height: 1.6em;
   font-weight: 500;
 

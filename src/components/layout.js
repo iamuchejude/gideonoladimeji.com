@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 
 const Main = styled.main`
   height: calc(100vh - (3 * 10vh));
-  padding: 5em 0;
+  padding: 5em 0 0;
 
   @media (max-width: 500px) {
     padding: 3em 0 3em;

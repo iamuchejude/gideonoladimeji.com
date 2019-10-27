@@ -39,7 +39,7 @@ module.exports = {
       options: {
         name: `Gideon Oladimeji`,
         short_name: `Gideon`,
-        description: `Gideon's E-Apartment.`,
+        description: `Gideon Oladimeji.`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,
