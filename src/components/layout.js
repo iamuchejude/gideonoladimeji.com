@@ -33,7 +33,6 @@ Layout.propTypes = {
 const Wrapper = styled.div`
   margin: 10vh auto;
   width: 900px;
-  min-height: 100vh;
 
   @media (max-width: 1000px) {
     width: 90vh;

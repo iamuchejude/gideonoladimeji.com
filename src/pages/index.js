@@ -6,15 +6,20 @@ import SEO from '../components/seo';
 const Index = () => (
   <Layout pathname="/">
     <SEO title="Gideon Oladimeji - Product Designer" />
-    <Text>Product Designer, Pianist and a Mobile Photographer.</Text>
     <Text>
-      Currently doing Product Design at <a href="https://automattic.com" target="_blank" rel="noopener noreferrer">Automattic</a>.
+      A product designer, Pianist and a mobile photographer.  
     </Text>
-    <Text>This site shows insights on how I think and use design to solve problems.</Text>
+    <Text>
+      Formerly a Product Designer at <a href="https://automattic.com" target="_blank" rel="noopener noreferrer">Automattic</a>.
+    </Text>
+    <Text>
+      I'm also the CEO of a startup design agency(<a href="http://3strokes.design" target="_blank" rel="noreferrer noopener">3strokes</a>) focused on helping business scale with design. I am open to new opportunities and roles.
+    </Text>
     <a
-      href="http://dribbble.com/scalarbane"
+      href="https://medium.com/gideon-case-studies"
       target="_blank"
       rel="noopener noreferrer"
+      role="button"
     >
       <Button marginTop>Works</Button>
     </a>
