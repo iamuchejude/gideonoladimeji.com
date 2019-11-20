@@ -10,11 +10,12 @@ const About = () => (
   <Layout pathname="/about">
     <SEO title="About Gideon." />
     <ContentHeader>About Gideon</ContentHeader>
+    
     <Container>
       <Block>
         <Image src={GideonImage} mobile alt="Gideon" />
         <Text>
-          I'm Gideon, Product Designer, Pianist and a Mobile Photographer. Currently doing Product Design at <a href="https://automattic" target="_blank" rel="noreferrer noopener">Automattic</a>.
+          I'm Gideon, Product Designer, Pianist and a Mobile Photographer. Previously doing Product Design at <a href="https://automattic.com" target="_blank" rel="noreferrer noopener">Automattic</a>.
         </Text>
 
         <Text>
@@ -22,11 +23,11 @@ const About = () => (
         </Text>
 
         <Text>
-          I have previously worked at various agencies and startups where I’ve used design to solve problems and also influence decisions, I’m also the CEO of a startup design agency <a href="http://3strokes.design" target="_blank" rel="noreferrer noopener">3strokes</a>; focused on helping businesses scale with design.
+          I have previously worked at various agencies and startups where I’ve used design to solve problems and also influence decisions. I’m also the CEO of a startup design agency <a href="http://3strokes.design" target="_blank" rel="noreferrer noopener">3strokes</a>; focused on helping businesses scale with design.
         </Text>
 
         <Text>
-          Do you have a project for my company? or just want to say hello? don’t hesitate to <AniLink paintDrip color="black" to="/contact">contact me</AniLink>. Cheers!
+          Do you have a project for my company? Or just want to say hello? don’t hesitate to <AniLink paintDrip color="black" to="/contact">contact me</AniLink>. Cheers!
         </Text>
       </Block>
 
