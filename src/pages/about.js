@@ -5,6 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import GideonImage from '../images/gideon.png';
+import GatsbyImage from '../components/image';
 
 const About = () => (
   <Layout pathname="/about">
@@ -13,7 +14,9 @@ const About = () => (
     
     <Container>
       <Block>
-        <Image src={GideonImage} mobile alt="Gideon" />
+        {/* <Image src={GideonImage} mobile alt="Gideon" /> */}
+        <GatsbyImage />
+        
         <Text>
           I'm Gideon, Product Designer, Pianist and a Mobile Photographer. Previously doing Product Design at <a href="https://automattic.com" target="_blank" rel="noreferrer noopener">Automattic</a>.
         </Text>
@@ -32,7 +35,8 @@ const About = () => (
       </Block>
 
       <Block>
-        <Image src={GideonImage} deskop alt="Gideon" />
+        {/* <Image src={GideonImage} deskop alt="Gideon" /> */}
+        <GatsbyImage />
       </Block>
     </Container>
   </Layout >
